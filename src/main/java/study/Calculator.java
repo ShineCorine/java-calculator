@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+
 public class Calculator {
 
     public static void main(String[] args) {
@@ -14,6 +15,8 @@ public class Calculator {
         String removeParathesis = removeParenthesis(input);
         List<Integer> numbers = myParser(removeParathesis);
         System.out.println("numbers = " + numbers);
+        char c = myCharAt(input, ',');
+        System.out.println("index of ',': " + c);
 
     }
 
@@ -30,8 +33,8 @@ public class Calculator {
         }
         return numberList;
     }
-    public static int myCharAt(String string, char s) throws IndexOutOfBoundsException{
-        return string.charAt(s);
+    public static char myCharAt(String string, int index) throws IndexOutOfBoundsException{
+        return string.charAt(index);
     }
     
 
