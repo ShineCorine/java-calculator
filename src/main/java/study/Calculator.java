@@ -11,13 +11,13 @@ public class Calculator {
 
         System.out.println("input: ");
         String input = scanner.nextLine();
-        String removeParathesis = removeParathesis(input);
+        String removeParathesis = removeParenthesis(input);
         List<Integer> numbers = myParser(removeParathesis);
         System.out.println("numbers = " + numbers);
 
     }
 
-    public static String removeParathesis(String string) {
+    public static String removeParenthesis(String string) {
         return string.replace("(", "").replace(")","");
     }
 
